@@ -1,0 +1,100 @@
+---
+title: Hello Gatsby
+date: 2020-09-19
+
+---
+
+# TLDR
+- Gatsbyをインストールしてこの記事を投稿するまで
+    - Gatsbyの導入
+    - GitHub経由でNetliifyで公開
+
+# フロー
+![flow](./flow.jpg)
+
+# 環境
+```xonsh
+satory074@iMac ~/BaseCamp/src $ uname
+Darwin
+satory074@iMac ~/BaseCamp/src $ npm -v
+6.14.8
+```
+
+# Gatsby CLIのインストール
+```xonsh
+satory074@iMac ~/BaseCamp/src $ npm install -g gatsby-cli
+```
+
+# gatsby-theme-blogを使って新規作成
+Gatsbyの公式のテンプレート？テーマ？のスターターをインストールする。
+
+色々選べるっぽい。
+
+https://www.gatsbyjs.com/starters/?v=2
+
+[gatsby-starter-blog-theme](https://github.com/gatsbyjs/gatsby-starter-blog-theme)を選択。
+
+```xonsh
+satory074@iMac ~/BaseCamp/src $ mkdir ssb
+satory074@iMac ~/BaseCamp/src $ gatsby new ssb https://github.com/gatsbyjs/gatsby-starter-blog-theme
+```
+
+テンプレページがlocalhostで見れるようになってるはず。
+```xonsh
+satory074@iMac ~/BaseCamp/src $ cd ssb
+satory074@iMac ~/BaseCamp/src/ssb $ gatsby develop
+success open and validate gatsby-configs - 0.065s
+success load plugins - 4.267s
+success onPreInit - 0.031s
+success initialize cache - 0.006s
+success copy gatsby files - 0.084s
+success onPreBootstrap - 0.010s
+success createSchemaCustomization - 0.009s
+success Checking for changed pages - 0.002s
+success source and transform nodes - 0.931s
+success building schema - 0.300s
+success createPages - 0.028s
+success Checking for changed pages - 0.001s
+success createPagesStatefully - 0.031s
+success update schema - 0.017s
+success write out redirect data - 0.002s
+success onPostBootstrap - 0.002s
+info bootstrap finished - 8.233s
+success onPreExtractQueries - 0.001s
+success extract queries from components - 0.261s
+success write out requires - 0.024s
+success run static queries - 0.069s - 4/4 58.08/s
+success run page queries - 1.120s - 4/4 3.57/s
+success Generating image thumbnails - 3.546s - 14/14 3.95/s
+⠀
+You can now view gatsby-starter-blog-theme in the browser.
+⠀
+  http://localhost:8000/
+⠀
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+⠀
+  http://localhost:8000/___graphql
+⠀
+Note that the development build is not optimized.
+To create a production build, use gatsby build
+⠀
+success Building development bundle - 5.091s
+```
+
+# GitHubにPush
+
+```xonsh
+（GitHubで"ssb"リポジトリを予め作成しておく）
+satory074@iMac ~/BaseCamp/src $ git remote add origin git@github.com:satory074/ssb.git
+satory074@iMac ~/BaseCamp/src $ git add .
+satory074@iMac ~/BaseCamp/src $ git commit -m 'first commit'
+satory074@iMac ~/BaseCamp/src $ git push origin master
+```
+
+# Netlify経由で公開
+リポジトリを選択して公開設定すると、以降Pushする度に更新が反映されて公開される。CI/CD?
+
+Netlify: https://www.netlify.com/
+
+やり方: https://qiita.com/k-penguin-sato/items/7554e5e7e90aa10ae225
+
