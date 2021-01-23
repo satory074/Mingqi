@@ -1,19 +1,20 @@
 {
-  "name": "gatsby-starter-blog-theme",
-  "private": true,
-  "version": "0.0.1",
+  "name": "Onogoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "clean": "gatsby clean"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "0BSD",
-  "dependencies": {
-    "gatsby": "^2.24.50",
-    "gatsby-theme-blog": "^2.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "theme-ui": "0.4.0-alpha.3"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satory074/Onogoro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satory074/Onogoro/issues"
+  },
+  "homepage": "https://github.com/satory074/Onogoro#readme"
 }

@@ -1,0 +1,30 @@
+body {
+    font-family: "メイリオ";
+    background-color: #aebac7;
+    color: #564837
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    background-color: #564837;
+    color: #c7aeba;
+    height: 90px;
+}
+
+.header-logo {
+    float: left;
+    font-size: 36px;
+    padding: 20px 40px;
+}
+
+.header-list li {
+    float: left;
+    padding: 33px 20px;
+}
+
+.main {
+    padding: 100px 80px;
+}
