@@ -1,5 +1,5 @@
 // Set Title
-document.title = "Onogoro";
+document.title = "Mingqi";
 
 // Set Header and Footer
 $(function () {
